@@ -8,6 +8,14 @@
 
   <!-- Site Properties -->
   <title>North Shore 7th</title>
+
+
+<!-- Open Graph data -->
+<meta property="og:title" content="North Shore 7th Ward" />
+<meta property="og:type" content="Ward Bulletin" />
+<meta property="og:url" content="http://www.northshore7.github.io/" />
+<meta property="og:image" content="/images/temple.jpg" />
+<meta property="og:description" content="Sacrament Program | Ward Announcements | New Member Registration | Ward Leader Directory | Links for Interviews and Appointments" />
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.css">
   
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/dropdown.css">
@@ -61,10 +69,10 @@
 </div>
 <div class="ui raised text centered aligned container segment">
   
-  <div class="ui text center aligned container">
-    <div class="content">
-        <p class="serif">
-          Sacrament Program
+  <div class="ui serif one column grid">
+    <div class="row">
+        <p class="column center aligned">
+          {{meetingName}}
         </p>
     </div>
   </div>
@@ -73,10 +81,10 @@
   <div class="ui serif one column grid">
     <div class="row">
       <div class="column center aligned ">
-        <p>Presiding<span v-for="n in (presidingNum+1)">. </span> {{presiding}}</p>
+        <p>Presiding<span v-for="n in (presidingNum)">. </span> {{presiding}}</p>
       </div>
       <div class="column center aligned ">
-        <p>Chorister<span v-for="n in (choristerNum)">. </span>{{chorister}}</p>
+        <p>Chorister<span v-for="n in (choristerNum-2)">. </span>{{chorister}}</p>
       </div>
       <div class="column center aligned ">
         <p>Organist<span v-for="n in (organistNum-1)">. </span>{{organist}}</p>
@@ -85,9 +93,9 @@
   </div>
 
   <br>
-  <div class="ui text center aligned container">
-    <div class="content">
-      <strong class="serif" style="font-size:18px;">
+  <div class="ui serif one column grid">
+    <div class="row">
+      <strong class="column center aligned" style="font-size:18px;">
         <em>Announcements</em>
       </strong>
     </div>
@@ -97,7 +105,7 @@
   <div class="ui serif one column grid">
     <div class="row">
       <div class="column center aligned ">
-        <p>Opening Hymn <span v-for="n in (hymnNum)">. </span> <a target="blank"  v-bind:href="'/hymns/'+hymn1[0]+'.pdf'">#{{hymn1[0]}}</a></p>
+        <p>Opening Hymn<span v-for="n in (hymnNum)">. </span> <a target="blank"  v-bind:href="'/hymns/'+hymn1[0]+'.pdf'">#{{hymn1[0]}}</a></p>
       </div>
       <div class="column center aligned ">
         <p>"{{hymn1[1]}}"</p>
@@ -110,9 +118,9 @@
   </div>
 
   <br>
-  <div class="ui text center aligned container">
-    <div class="content">
-        <strong class="serif" style="font-size:18px;">
+  <div class="ui serif one colmun grid">
+    <div class="row">
+        <strong class="column center aligned" style="font-size:18px;">
           <em>Ward Business</em>
         </strong>
     </div>
@@ -122,7 +130,7 @@
   <div class="ui serif one column grid">
     <div class="row">
       <div class="column center aligned ">
-        <p>Sacrament Hymn<span v-for="n in (hymnNum)">. </span><a target="blank"  v-bind:href="'/hymns/'+hymn2[0]+'.pdf'">#{{hymn2[0]}}</a></p>
+        <p>Sacrament Hymn<span v-for="n in (hymnNum-2)">. </span><a target="blank"  v-bind:href="'/hymns/'+hymn2[0]+'.pdf'">#{{hymn2[0]}}</a></p>
       </div>
       <div class="column center aligned ">
         <p>"{{hymn2[1]}}"</p>
@@ -130,17 +138,25 @@
     </div>
   </div>
 
-  <br>
-  <div class="ui text center aligned container">
-  <div class="content">
-      <strong class="serif" style="font-size:18px;">
-        <em>Administration of Sacrament</em>
-      </strong>
+    <br>
+  <div class="ui serif one colmun grid">
+    <div class="row">
+        <strong class="column center aligned" style="font-size:18px;">
+          <em>Administration of Sacrament</em>
+        </strong>
+    </div>
   </div>
+  <br>
+  <div class="ui serif one colmun grid">
+    <div class="row">
+        <strong class="column center aligned" style="font-size:18px;">
+          <em>Youth Program and Musical Number</em>
+        </strong>
+    </div>
   </div>
   <br>
 
-  <div class="ui serif one column grid">
+ <!--  <div class="ui serif one column grid">
     <div class="row">
       <div class="column center aligned ">
         <p>Speaker<span v-for="n in (speaker1Num)">. </span>{{speaker[0]}}</p>
@@ -152,9 +168,9 @@
       
     </div>
     </div>
+ -->
 
-
-  <div class="ui serif one column grid">
+<!--   <div class="ui serif one column grid">
     <div class="row">
       <div class="column center aligned ">
         <p>Musical Number<span v-for="n in (hymnNum-24)">. </span><a target="blank"  v-bind:href="'/hymns/'+hymn3[0]+'.pdf'">{{hymn3[0]}}</a></p>
@@ -167,7 +183,7 @@
       </div>
      
     </div>
-  </div>
+  </div> -->
       <div class="ui serif one column grid">
     <div class="row">
        <div class="column center aligned ">
@@ -177,7 +193,7 @@
         <p>"{{hymn4[1]}}"</p>
       </div>
     <div class="column center aligned ">
-        <p>Benediction<span v-for="n in (prayer2Num-5)">. </span>{{prayer2}}</p>
+        <p>Benediction<span v-for="n in (prayer2Num-7)">. </span>{{prayer2}}</p>
     </div>
     </div>
   </div>
@@ -186,9 +202,9 @@
 
 <div class="ui raised text centered aligned container segment">
   
-  <div class="ui text center aligned container">
-    <div class="content">
-        <p class="serif">
+  <div class="ui serif one column grid">
+    <div class="row">
+        <p class="column center aligned">
           Ward Announcements
         </p>
     </div>
@@ -203,6 +219,7 @@
     </div>
     <div class="active content">
       {{announcements.info}}
+      <img class="ui centered tiny image" v-bind:src="announcements.img">
     </div>
   <!--   <div>
   <div v-for="itmes in items">
@@ -292,247 +309,10 @@
 </form>
  
 </div>
-<div class="ui raised text centered aligned container segment">
   
-  <div class="ui text center aligned container">
-    <div class="content">
-        <p class="serif">
-          Contact Information
-        </p>
-    </div>
-  </div>
-  <br>
 
-  <table class="ui very basic celled table">
 
-  <tbody>
-    <tr>
-      <td>
-        <h4 class="ui image header">
-          
-          <div class="content">
-            Bishop
-            <div class="sub header">John Broadbent
-          </div>
-        </div>
-      </h4></td>
-      <td>
-        <em>See Executive Secretary</em>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <h4 class="ui image header">
-          
-          <div class="content">
-            First Counselor
-            <div class="sub header">Lou Weinberg
-          </div>
-        </div>
-      </h4></td>
-      <td>
-        <a href="tel:+8018082488"><i class="phone icon"></i> 801-808-2488</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <h4 class="ui image header">
-          
-          <div class="content">
-            Second Counselor
-            <div class="sub header">Ryan Rock
-          </div>
-        </div>
-      </h4></td>
-      <td>
-        <a href="tel:+8018082488"><i class="phone icon"></i> 801-808-2488</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <h4 class="ui image header">
-          
-          <div class="content">
-            Executive Secretary
-            <div class="sub header">Ty Brooks
-          </div>
-        </div>
-      </h4></td>
-      <td>
-        <a href="tel:+8018082488"><i class="phone icon"></i> 801-808-2488</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <h4 class="ui image header">
-          
-          <div class="content">
-            Assistant Executive Secretary
-            <div class="sub header">John Broadbent
-          </div>
-        </div>
-      </h4></td>
-      <td>
-        <a href="tel:+8018082488"><i class="phone icon"></i> 801-808-2488</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <h4 class="ui image header">
-          
-          <div class="content">
-            Elders Quorum President
-            <div class="sub header">Jonathan Moffitt
-          </div>
-        </div>
-      </h4></td>
-      <td>
-        <a href="tel:+8018082488"><i class="phone icon"></i> 801-808-2488</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <h4 class="ui image header">
-          
-          <div class="content">
-            Ward Clerk
-            <div class="sub header">Cabot Murdock
-          </div>
-        </div>
-      </h4></td>
-      <td>
-        <a href="tel:+8018082488"><i class="phone icon"></i> 801-808-2488</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <h4 class="ui image header">
-          
-          <div class="content">
-            Membership Clerk
-            <div class="sub header">Tom Rose
-          </div>
-        </div>
-      </h4></td>
-      <td>
-        <a href="tel:+8018082488"><i class="phone icon"></i> 801-808-2488</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <h4 class="ui image header">
-          
-          <div class="content">
-            Financial Clerk
-            <div class="sub header">Matt Church
-          </div>
-        </div>
-      </h4></td>
-      <td>
-        <a href="tel:+8018082488"><i class="phone icon"></i> 801-808-2488</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <h4 class="ui image header">
-          
-          <div class="content">
-            Relief Society President
-            <div class="sub header">Misty Curtis
-          </div>
-        </div>
-      </h4></td>
-      <td>
-        <a href="tel:+8018082488"><i class="phone icon"></i> 801-808-2488</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <h4 class="ui image header">
-          
-          <div class="content">
-            Sunday School President
-            <div class="sub header">Scott Watco
-          </div>
-        </div>
-      </h4></td>
-      <td>
-        <a href="tel:+8018082488"><i class="phone icon"></i> 801-808-2488</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <h4 class="ui image header">
-          
-          <div class="content">
-            Young Women's President
-            <div class="sub header">Karlin White
-          </div>
-        </div>
-      </h4></td>
-      <td>
-        <a href="tel:+8018082488"><i class="phone icon"></i> 801-808-2488</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <h4 class="ui image header">
-          
-          <div class="content">
-            Young Men's President
-            <div class="sub header">Justin Keck
-          </div>
-        </div>
-      </h4></td>
-      <td>
-        <a href="tel:+8018082488"><i class="phone icon"></i> 801-808-2488</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <h4 class="ui image header">
-          
-          <div class="content">
-            Primary President
-            <div class="sub header">Angela Williams
-          </div>
-        </div>
-      </h4></td>
-      <td>
-        <a href="tel:+8018082488"><i class="phone icon"></i> 801-808-2488</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <h4 class="ui image header">
-          
-          <div class="content">
-            Ward Mission Leader
-            <div class="sub header">Darin Ramos
-          </div>
-        </div>
-      </h4></td>
-      <td>
-        <a href="tel:+8018082488"><i class="phone icon"></i> 801-808-2488</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <h4 class="ui image header">
-          
-          <div class="content">
-            Moving Coordinator
-            <div class="sub header">Tydon Holverson
-          </div>
-        </div>
-      </h4></td>
-      <td>
-        <a href="tel:+8018082488"><i class="phone icon"></i> 801-808-2488</a>
-      </td>
-    </tr>
-  </tbody>
-  </table>
-</div>
+  
 <div class="ui raised text centered aligned container segment">
   
   <div class="ui text center aligned container">
@@ -576,7 +356,7 @@
       </td>
     </tr>
     <tr>
-      <td>
+      </td>
         
   </tbody>
   </table>
@@ -590,31 +370,40 @@
     el: '#app',
     data: {
       //hero
-      date:"November 25, 2018",
+      date:"December 9, 2018",
       quote:[
-      "Many of our memorable and enduring Christmas traditions include different kinds of lights — lights on trees, lights in and on our homes, candles on our tables. May the beautiful lights of every holiday season remind us of him who is the source of all light.","David A. Bednar"
+      "Learn of me, and listen to my words; walk in the meekness of my Spirit, and you shall have peace in me.","D&C 19:23"
       ],
-      img:"/images/bethlehem.jpg",
+      meetingName:"Sacrament Meeting",
+      img:"/images/nativity.jpg",
       //presiding
       presiding:"John Broadbent",
       chorister:"Claire Rice",
-      organist:"Deb Fleming",
+      organist:"Neil Hardy",
       //assignments
-      prayer1:"Laurie Armstrong",
-      prayer2:"Josh Spongberg",
+      prayer1:"Natalie Malan",
+      prayer2:"TBA",
       speaker:["Daniel Mitchell","Barbara Cutler","Preston Cutler","Ruth Harris"],
       //hymns
-      hymn1:[232,"Let Us Oft Speak Kind Words"],
-      hymn2:[175,"O God, the Eternal Father"],
-      hymn3:["Caryn Bradley, acc. Kara Olson","Silent Night"],
-      hymn4:[308,"Love One Another"],
+      hymn1:[1,"Oh, Come, All Ye Faithful"],
+      hymn2:[184,"Upon the Cross of Calvary "],
+      hymn3:[207,"It Came Upon a Midnight Clear"],
+      hymn4:[201,"Joy to the World"],
       //annoucements
       announcements:[
       {title:"Ward Christmas Party",
           info:"December 14 from 7-9PM at the Dock Street Building"
         },
+        {title:"Youth Stake Trek",
+          info:"All youth who are eligible to participate in the Stake Trek planned for 2019 should complete the survey at bit.ly/NorthShoreTrek, or by scanning the QR below:",
+          img:"/images/trekQR.png"
+        },
+        {title:"Christmas Clothing Drive",
+          info:"Help those in need this Christmas by donating clothes to the Road Home Charity. Collection bins and information is located in the foyers."
+        },
         {title:"Tithing Settlement",
-          info:"Schedule appointments online at northshore7thward.youcanbook.me, or by scanning QR code below:"
+          info:"Schedule appointments online at northshore7thward.youcanbook.me, or by scanning QR code below:",
+          img:"/images/tithingQR.png"
         },
         {title:"Ward Choir",
           info:"Every Sunday at 11am at Kara Olson’s home."
@@ -638,21 +427,61 @@
         name:"Lou Weinberg",
         phone:"8018082488"
       },
-      {calling:"First Counselor",
-        name:"Lou Weinberg",
-        phone:"8018082488"
-      },
       {calling:"Second Counselor",
         name:"Ryan Rock",
-        phone:"8018082488"
+        phone:"8017872597"
       },
       {calling:"Executive Secretary",
         name:"Ty Brooks",
-        phone:"8018082488"
+        phone:"8012447528"
       },
       {calling:"Assistant Executive Secretary",
         name:"Jeff Levitt",
-        phone:"8018082488"
+        phone:"4357733572"
+      },
+      {calling:"Elders Quorum President",
+        name:"Jonathan Moffit",
+        phone:"8014504506"
+      },
+      {calling:"Ward Clerk",
+        name:"Cabot Murdock",
+        phone:"8014048634"
+      },
+      {calling:"Membership Clerk",
+        name:"Tom Rose",
+        phone:"8017754775"
+      },
+      {calling:"Financial Clerk",
+        name:"Matt Church",
+        phone:"8015609766"
+      },
+      {calling:"Relief Society President",
+        name:"Misty Curtis",
+        phone:"9284281106"
+      },
+      {calling:"Sunday School President",
+        name:"Scott Watco",
+        phone:"8016417459"
+      },
+      {calling:"Young Women's President",
+        name:"Karlin White",
+        phone:"8019186903"
+      },
+      {calling:"Young Men's President",
+        name:"Justin Keck",
+        phone:"8017927763"
+      },
+      {calling:"Primary President",
+        name:"Angela Williams",
+        phone:"3854498075"
+      },
+      {calling:"Ward Mission Leader",
+        name:"Darin Ramos",
+        phone:"8016525178"
+      },
+      {calling:"Moving Coordinator",
+        name:"Tydon Holverson",
+        phone:"8016742814"
       },
       ],
       //spacing
@@ -687,6 +516,8 @@ if (w > 764) {
   dots = 40;
 } else if (w > 370) {
   dots = 25;
+}else {
+  dots = 20;
 }
   app.presidingNum = dots-2-app.presiding.length;
   app.choristerNum = dots-app.chorister.length;

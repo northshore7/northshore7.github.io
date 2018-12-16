@@ -81,7 +81,7 @@
   <div class="ui serif one column grid">
     <div class="row">
       <div class="column center aligned ">
-        <p>Presiding<span v-for="n in (presidingNum)">. </span> {{presiding}}</p>
+        <p>Presiding<span v-for="n in (presidingNum+1)">. </span> {{presiding}}</p>
       </div>
       <div class="column center aligned ">
         <p>Chorister<span v-for="n in (choristerNum-2)">. </span>{{chorister}}</p>
@@ -150,7 +150,7 @@
   <div class="ui serif one colmun grid">
     <div class="row">
         <strong class="column center aligned" style="font-size:18px;">
-          <em>Youth Program and Musical Number</em>
+          <em>Stake Agenda</em>
         </strong>
     </div>
   </div>
@@ -193,7 +193,7 @@
         <p>"{{hymn4[1]}}"</p>
       </div>
     <div class="column center aligned ">
-        <p>Benediction<span v-for="n in (prayer2Num-7)">. </span>{{prayer2}}</p>
+        <p>Benediction<span v-for="n in (prayer2Num-4)">. </span>{{prayer2}}</p>
     </div>
     </div>
   </div>
@@ -372,38 +372,33 @@
       //hero
       date:"December 9, 2018",
       quote:[
-      "Learn of me, and listen to my words; walk in the meekness of my Spirit, and you shall have peace in me.","D&C 19:23"
+      "Fear not, for, behold, I bring you good tidings of great joy, which shall be to all people.","Luke 2:10"
       ],
       meetingName:"Sacrament Meeting",
-      img:"/images/nativity.jpg",
+      img:"https://www.lds.org/bc/content/shared/content/images/gospel-library/magazine/ensignlp.nfo:o:195.jpg",
       //presiding
-      presiding:"John Broadbent",
-      chorister:"Claire Rice",
-      organist:"Neil Hardy",
+      presiding:"President Peterson",
+      chorister:"Taylee Holverson",
+      organist:"Ashley Curtis",
       //assignments
-      prayer1:"Natalie Malan",
-      prayer2:"TBA",
+      prayer1:"Abbi Larson",
+      prayer2:"Jeff Leavitt",
       speaker:["Daniel Mitchell","Barbara Cutler","Preston Cutler","Ruth Harris"],
       //hymns
-      hymn1:[1,"Oh, Come, All Ye Faithful"],
-      hymn2:[184,"Upon the Cross of Calvary "],
+      hymn1:[206,"Away in a Manger"],
+      hymn2:[185,"Reverently and Meekly Now"],
       hymn3:[207,"It Came Upon a Midnight Clear"],
-      hymn4:[201,"Joy to the World"],
+      hymn4:[209,"Hark! The Herald Angels Sing"],
       //annoucements
       announcements:[
-      {title:"Ward Christmas Party",
-          info:"December 14 from 7-9PM at the Dock Street Building"
-        },
         {title:"Youth Stake Trek",
-          info:"All youth who are eligible to participate in the Stake Trek planned for 2019 should complete the survey at bit.ly/NorthShoreTrek, or by scanning the QR below:",
-          img:"/images/trekQR.png"
+          info:"All youth who are eligible to participate in the Stake Trek planned for 2019 should complete the survey at bit.ly/NorthShoreTrek."
         },
         {title:"Christmas Clothing Drive",
           info:"Help those in need this Christmas by donating clothes to the Road Home Charity. Collection bins and information is located in the foyers."
         },
         {title:"Tithing Settlement",
-          info:"Schedule appointments online at northshore7thward.youcanbook.me, or by scanning QR code below:",
-          img:"/images/tithingQR.png"
+          info:"Schedule appointments online at northshore7thward.youcanbook.me"
         },
         {title:"Ward Choir",
           info:"Every Sunday at 11am at Kara Olson’s home."
@@ -415,7 +410,8 @@
           info:"Every Sunday 5-5:30 at the dock street building in the Relief Society room."
         },
         {title:"Bishop Appointments",
-          info:"For appointments with the Bishop and for temple recommend interviews, contact Ty Brooks or Jeff Leavitt - or schedule online at northshore7thward.youcanbook.me"
+          info:"For appointments with the Bishop and for temple recommend interviews, contact Ty Brooks or Jeff Leavitt - or schedule online at northshore7thward.youcanbook.me",
+          img:"/images/ward-bookme.png"
         },
         {title:"Stake Temple Recommends",
           info:"For stake temple recommends, schedule online at northshorestake.youcanbook.me"
