@@ -81,7 +81,7 @@
   <div class="ui serif one column grid">
     <div class="row">
       <div class="column center aligned ">
-        <p>Presiding<span v-for="n in (presidingNum+2)">. </span> {{presiding}}</p>
+        <p>Presiding<span v-for="n in (presidingNum+1)">. </span> {{presiding}}</p>
       </div>
       <div class="column center aligned ">
         <p>Chorister<span v-for="n in (choristerNum-2)">. </span>{{chorister}}</p>
@@ -121,7 +121,7 @@
   <div class="ui serif one colmun grid">
     <div class="row">
         <strong class="column center aligned" style="font-size:18px;">
-          <em>Business</em>
+          <em>Ward Business</em>
         </strong>
     </div>
   </div>
@@ -187,10 +187,10 @@
       <div class="ui serif one column grid">
     <div class="row">
        <div class="column center aligned ">
-        <p>Congregation to join in final verse of "O Holy Night" <br>(See reverse for lyrics)</p>
+        <p>Closing Hymn<span v-for="n in (hymnNum)">. </span><a target="blank" v-bind:href="'/hymns/'+hymn4[0]+'.pdf'">#{{hymn4[0]}}</a></p>
       </div>
       <div class="column center aligned ">
-
+        <p>"{{hymn4[1]}}"</p>
       </div>
     <div class="column center aligned ">
         <p>Benediction<span v-for="n in (prayer2Num-4)">. </span>{{prayer2}}</p>
@@ -370,29 +370,48 @@
     el: '#app',
     data: {
       //hero
-      date:"December 23, 2018",
+      date:"December 16, 2018",
       quote:[
       "Fear not, for, behold, I bring you good tidings of great joy, which shall be to all people.","Luke 2:10"
       ],
       meetingName:"Sacrament Meeting",
       img:"https://www.lds.org/bc/content/shared/content/images/gospel-library/magazine/ensignlp.nfo:o:195.jpg",
       //presiding
-      presiding:"Brent Peterson",
-      chorister:"Amanda Coons",
-      organist:"Deb Fleming",
+      presiding:"President Peterson",
+      chorister:"Taylee Holverson",
+      organist:"Ashley Curtis",
       //assignments
-      prayer1:"Michelle Mayfield",
-      prayer2:"Doug Weller",
+      prayer1:"Abbi Larson",
+      prayer2:"Jeff Leavitt",
       speaker:["Daniel Mitchell","Barbara Cutler","Preston Cutler","Ruth Harris"],
       //hymns
-      hymn1:[205,"Once in Royal David’s City"],
-      hymn2:[181,"Jesus of Nazareth, Savior and King"],
-      hymn3:[1,"O Holy Night"],
-      hymn4:[1,"O Holy Night"],
+      hymn1:[3,"Away in a Manger"],
+      hymn2:[169,"Reverently and Meekly Now"],
+      hymn3:[143,"It Came Upon a Midnight Clear"],
+      hymn4:[209,"Hark! The Herald Angels Sing"],
       //annoucements
       announcements:[
         {title:"Youth Stake Trek",
           info:"All youth who are eligible to participate in the Stake Trek planned for 2019 should complete the survey at bit.ly/NorthShoreTrek."
+        },
+        {title:"Christmas Clothing Drive",
+          info:"Help those in need this Christmas by donating clothes to the Road Home Charity. Collection bins and information is located in the foyers."
+        },
+        {title:"Tithing Settlement",
+          info:"Schedule appointments online at northshore7thward.youcanbook.me"
+        },
+        {title:"Ward Choir",
+          info:"Every Sunday at 11am at Kara Olson’s home."
+        },
+        {title:"Ward Temple Sealing Night",
+          info:"Second Wednesday of each month. 7pm to 8pm."
+        },
+        {title:"Missionary Preparation Class",
+          info:"Every Sunday 5-5:30 at the dock street building in the Relief Society room."
+        },
+        {title:"Bishop Appointments",
+          info:"For appointments with the Bishop and for temple recommend interviews, contact Ty Brooks or Jeff Leavitt - or schedule online at northshore7thward.youcanbook.me",
+          img:"/images/ward-bookme.png"
         },
         {title:"Stake Temple Recommends",
           info:"For stake temple recommends, schedule online at northshorestake.youcanbook.me"
