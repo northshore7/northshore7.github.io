@@ -138,7 +138,7 @@
     </div>
   </div>
 
-  <br>
+    <br>
   <div class="ui serif one colmun grid">
     <div class="row">
         <strong class="column center aligned" style="font-size:18px;">
@@ -147,8 +147,16 @@
     </div>
   </div>
   <br>
+  <div class="ui serif one colmun grid">
+    <div class="row">
+        <strong class="column center aligned" style="font-size:18px;">
+          <em>Christmas Program</em>
+        </strong>
+    </div>
+  </div>
+  <br>
 
-<div class="ui serif one column grid">
+ <!--  <div class="ui serif one column grid">
     <div class="row">
       <div class="column center aligned ">
         <p>Speaker<span v-for="n in (speaker1Num)">. </span>{{speaker[0]}}</p>
@@ -160,57 +168,36 @@
       
     </div>
     </div>
+ -->
 
 <!--   <div class="ui serif one column grid">
     <div class="row">
       <div class="column center aligned ">
-        <p>Musical Number<span v-for="n in (hymnNum-2)">. </span><a target="blank"  v-bind:href="'/hymns/'+hymn3[0]+'.pdf'">#{{hymn3[0]}}</a></p>
+        <p>Musical Number<span v-for="n in (hymnNum-24)">. </span><a target="blank"  v-bind:href="'/hymns/'+hymn3[0]+'.pdf'">{{hymn3[0]}}</a></p>
       </div>
       <div class="column center aligned ">
-        <p>"{{hymn2[1]}}"</p>
+        <p>"{{hymn3[1]}}"</p>
       </div>
-    </div>
-  </div> -->
-    <br>
-  <div class="ui serif one colmun grid">
-    <div class="row">
-        <strong class="column center aligned" style="font-size:18px;">
-          <em>Musical number by the Broadbent family</em>
-        </strong>
-    </div>
-  </div>
-  <br>
-
-<div class="ui serif one column grid">
-    <div class="row">
-
       <div class="column center aligned ">
         <p>Speaker<span v-for="n in (speaker3Num)">. </span>{{speaker[2]}}</p>
       </div>
      
     </div>
-  </div>
-
-  <div class="ui serif one column grid">
-    <div class="row">
-      <div class="column center aligned ">
-        <p>Closing Hymn<span v-for="n in (hymnNum-2)">. </span><a target="blank"  v-bind:href="'/hymns/'+hymn4[0]+'.pdf'">#{{hymn4[0]}}</a></p>
-      </div>
-      <div class="column center aligned ">
-        <p>"{{hymn4[1]}}"</p>
-      </div>
-    </div>
-  </div>
-
+  </div> -->
       <div class="ui serif one column grid">
     <div class="row">
+       <div class="column center aligned ">
+        <p>Congregation to join in final verse of "O Holy Night" <br>(See reverse for lyrics)</p>
+      </div>
+      <div class="column center aligned ">
+
+      </div>
     <div class="column center aligned ">
         <p>Benediction<span v-for="n in (prayer2Num-4)">. </span>{{prayer2}}</p>
     </div>
     </div>
   </div>
     <br>
-
 </div>
 
 <div class="ui raised text centered aligned container segment">
@@ -383,42 +370,29 @@
     el: '#app',
     data: {
       //hero
-      date:"December 30, 2018",
+      date:"December 23, 2018",
       quote:[
-      "We can change our behavior. Our very desires can change. How? There is only one way. True change—permanent change—can come only through the healing, cleansing, and enabling power of the Atonement of Jesus Christ. He loves you—each of you! He allows you to access His power as you keep His commandments, eagerly, earnestly, and exactly. It is that simple and certain. The gospel of Jesus Christ is a gospel of change!","Russell M. Nelson "
+      "Fear not, for, behold, I bring you good tidings of great joy, which shall be to all people.","Luke 2:10"
       ],
       meetingName:"Sacrament Meeting",
-      img:"https://www.mormonnewsroom.org/media/orig/Christ-Rich-young-man.jpg",
+      img:"https://www.lds.org/bc/content/shared/content/images/gospel-library/magazine/ensignlp.nfo:o:195.jpg",
       //presiding
       presiding:"Brent Peterson",
-      chorister:"TBA",
-      organist:"Sister Baker",
+      chorister:"Amanda Coons",
+      organist:"Deb Fleming",
       //assignments
-      prayer1:"TBA",
-      prayer2:"TBA",
-      speaker:["TBA","TBA","TBA","TBA"],
+      prayer1:"Michelle Mayfield",
+      prayer2:"Doug Weller",
+      speaker:["Daniel Mitchell","Barbara Cutler","Preston Cutler","Ruth Harris"],
       //hymns
-      hymn1:[3,"Now Let Us Rejoice"],
-      hymn2:[169,"As Now We Take the Sacrament"],
+      hymn1:[205,"Once in Royal David’s City"],
+      hymn2:[181,"Jesus of Nazareth, Savior and King"],
       hymn3:[1,"O Holy Night"],
-      hymn4:[143,"Let the Holy Spirit Guide "],
+      hymn4:[1,"O Holy Night"],
       //annoucements
-   announcements:[
-
+      announcements:[
         {title:"Youth Stake Trek",
-          info:"All youth who are eligible to participate in the Stake Trek planned for 2019 should complete the survey at bit.ly/NorthShoreTrek"
-        },
-        {title:"Ward Choir",
-          info:"Every Sunday at 11am at Kara Olson’s home."
-        },
-        {title:"Ward Temple Sealing Night",
-          info:"Second Wednesday of each month. 7-8pm."
-        },
-        {title:"Missionary Preparation Class",
-          info:"Every Sunday 5-5:30pm at the dock street building in the Relief Society room."
-        },
-        {title:"Bishop Appointments",
-          info:"For appointments with the Bishop and for temple recommend interviews, contact Ty Brooks or Jeff Leavitt - or schedule online at northshore7thward.youcanbook.me"
+          info:"All youth who are eligible to participate in the Stake Trek planned for 2019 should complete the survey at bit.ly/NorthShoreTrek."
         },
         {title:"Stake Temple Recommends",
           info:"For stake temple recommends, schedule online at northshorestake.youcanbook.me"
